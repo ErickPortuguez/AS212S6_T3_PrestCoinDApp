@@ -1,0 +1,75 @@
+/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/purple-green.css';
+
+/* Estilo global para el fondo del panel de opciones */
+.ng-dropdown-panel {
+    background-color: #ffffff !important;
+    border: 1px solid #ced4da !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  /* Estilo para los elementos de la lista de opciones */
+  .ng-dropdown-panel .ng-option {
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  /* Estilo cuando se pasa el ratón sobre las opciones */
+  .ng-dropdown-panel .ng-option:hover {
+    background-color: #f8f9fa;
+  }
+  
+  /* Estilo para el texto de la opción seleccionada */
+  .ng-value-label {
+    color: #495057;
+  }
+  
+  /* Estilo para el borde del contenedor del ng-select */
+  .ng-select {
+    width: 100%;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+  }
+  
+  /* Estilo para el contenedor del input de búsqueda */
+  .ng-select-container {
+    border: none !important;
+  }
+  
+  /* Estilo para el input de búsqueda */
+  .ng-select-search-input {
+    border: none !important;
+    box-shadow: none !important;
+  }
+  
+  /* Estilo para el icono de la flecha del ng-select */
+  .ng-select-icon {
+    top: 12px !important;
+    right: 10px !important;
+  }
+  
+  /* Estilo para el texto del placeholder */
+  .ng-placeholder {
+    color: #6c757d;
+  }
+  
+  /* Estilo para el borde del input cuando está enfocado */
+  .ng-select.ng-select-focused {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+
+
+  /* Ocultar el placeholder después de seleccionar un valor */
+.ng-select.ng-select-single .ng-select-container .ng-placeholder {
+    display: none !important;
+  }
+  
+  /* Estilo adicional para el valor seleccionado */
+  .ng-select.ng-select-single .ng-value-container {
+    padding-top: 6px; /* Ajusta el espacio entre el valor seleccionado y el borde del contenedor */
+  }
+  
+  

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desarrolladores</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    /* Estilos adicionales personalizados */
+    body {
+      background-color: #f8f9fa;
+    }
+    .card {
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+      transition: transform 0.3s ease-in-out; /* Transición para la animación */
+    }
+    .card:hover {
+      transform: translateY(-5px); /* Efecto de levantar al pasar el mouse */
+    }
+    .card-img-top {
+      height: 300px; /* Altura máxima de la imagen */
+      object-fit: cover; /* Ajuste para cubrir el contenedor sin deformar */
+      border-top-left-radius: 8px; /* Borde redondeado en la esquina superior izquierda */
+      border-top-right-radius: 8px; /* Borde redondeado en la esquina superior derecha */
+    }
+    .card-body {
+      padding: 20px;
+    }
+    .card-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .card-text {
+      font-size: 1rem;
+      line-height: 1.4;
+      color: #333;
+    }
+    .btn-primary, .btn-secondary {
+      margin-top: 10px;
+      margin-right: 5px;
+    }
+    .container {
+      margin-top: 50px; /* Aumentamos el margen superior del contenedor */
+    }
+    .skills {
+      list-style-type: none;
+      padding: 0;
+    }
+    .skills li {
+      display: inline;
+      margin-right: 10px;
+    }
+    .skills .badge {
+      background-color: #007bff;
+      color: white;
+    }
+    .social-icons {
+      margin-top: 10px;
+    }
+    .social-icons a {
+      color: #333;
+      margin-right: 10px;
+    }
+    .footer {
+      margin-top: 50px;
+      padding: 10px;
+      background-color: #343a40;
+      color: white;
+      text-align: center;
+    }
+    .footer a {
+      color: #007bff;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="text-center mb-5">
+    <h1>Conoce a nuestros Desarrolladores</h1>
+    <p>Estos son los talentosos individuos detrás de nuestra aplicación.</p>
+  </div>
+  
+  <div class="row">
+    <!-- Tarjeta 1: Erick Portuguez Zavala -->
+    <div class="col-lg-6">
+      <div class="card">
+        <img src="assets/images/erick.jpg" class="card-img-top" alt="Foto de Erick Portuguez Zavala">
+        <div class="card-body">
+          <h5 class="card-title">Erick Portuguez Zavala</h5>
+          <p class="card-text">Estudiante de Análisis de Sistemas en Instituto Superior Valle Grande. Erick se especializa en el desarrollo frontend utilizando tecnologías modernas para crear interfaces de usuario intuitivas y atractivas.</p>
+          <ul class="skills">
+            <li><span class="badge badge-pill">HTML</span></li>
+            <li><span class="badge badge-pill">CSS</span></li>
+            <li><span class="badge badge-pill">JavaScript</span></li>
+            <li><span class="badge badge-pill">Angular</span></li>
+          </ul>
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/in/erick-portuguez-0b64ab23b/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/ErickPortuguez" target="_blank"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarjeta 2: Jeferson Alexander Mauricio Sánchez -->
+    <div class="col-lg-6">
+      <div class="card">
+        <img src="assets/images/jeferson.jpg" class="card-img-top" alt="Foto de Jeferson Alexander Mauricio Sánchez">
+        <div class="card-body">
+          <h5 class="card-title">Jeferson Alexander Mauricio Sánchez</h5>
+          <p class="card-text">Estudiante de Análisis de Sistemas en Instituto Superior Valle Grande. Jeferson se centra en el desarrollo backend y tiene experiencia en la construcción de API robustas y eficientes.</p>
+          <ul class="skills">
+            <li><span class="badge badge-pill">HTML</span></li>
+            <li><span class="badge badge-pill">CSS</span></li>
+            <li><span class="badge badge-pill">JavaScript</span></li>
+            <li><span class="badge badge-pill">React</span></li>
+          </ul>
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/perfil_de_tu_amigo" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/jefersonmauricio" target="_blank"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Sección de contacto -->
+  <div class="text-center mt-5">
+    <h2>Contacto</h2>
+    <p>Si tienes alguna pregunta o deseas más información, no dudes en contactarnos.</p>
+    <a href="mailto:contacto@empresa.com" class="btn btn-primary">Enviar un correo</a>
+  </div>
+</div>
+
+<!-- Pie de página -->
+<div class="footer">
+  <p>&copy; 2024 Nuestra Empresa. Todos los derechos reservados.</p>
+  <p>
+    <a href="#!">Política de Privacidad</a> | 
+    <a href="#!">Términos de Servicio</a>
+  </p>
+</div>
+
+<!-- Bootstrap JS y dependencias opcionales -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

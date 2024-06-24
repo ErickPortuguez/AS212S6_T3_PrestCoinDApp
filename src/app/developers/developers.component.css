@@ -1,0 +1,6 @@
+
+  .card-img-top {
+    max-width: 75%; /* Hace que la imagen no se salga del ancho del contenedor */
+    height: auto;   /* Mantiene la proporción de la imagen */
+    object-fit: cover; /* Ajusta la imagen sin distorsión */
+  }

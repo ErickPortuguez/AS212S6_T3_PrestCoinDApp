@@ -1,0 +1,32 @@
+<div class="toolbar" role="banner" style="position: fixed; z-index: 9999;">
+    <header class="header">
+        <div class="container" style="margin-left: 0;">
+            <div class="btn-menu">
+                <label for="btn-menu" style="text-align: center; display: block; margin: 0 auto;">☰ PRESTCOIN</label>
+            </div>
+        </div>
+    </header>
+    <div class="capa"></div>
+</div>
+
+<br>
+<br>
+<!-- --------------->
+<input type="checkbox" id="btn-menu">
+<div class="container-menu" style="position: fixed; z-index: 9990;">
+    <header class="header"></header>
+    <div class="cont-menu" style="bottom: -70px;">
+        <nav>
+            <a href="/navigation" style="margin-top: 10%;"><i class="fa-solid fa-home"></i> INICIO</a>
+            <a href="/developers"><i class="fa-solid fa-code"></i> DESARROLLADORES</a>
+            <a href="/transaccion"><i class="fa-solid fa-user"></i> TRANSACCION</a>
+        </nav>
+        <label for="btn-menu"><i class="fa-solid fa-circle-xmark"></i></label>
+    </div>
+</div>
+
+<br>
+<br>
+<div class="container-lg">
+    <router-outlet></router-outlet>
+</div>

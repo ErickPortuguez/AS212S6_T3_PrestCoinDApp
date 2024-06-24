@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PrestCoin</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome para iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    /* Estilos adicionales personalizados */
+    body {
+      background-color: #f8f9fa;
+      color: #343a40;
+    }
+    .title, .section-title {
+      color: #0056b3; /* Azul oscuro */
+      margin-bottom: 20px;
+    }
+    .subtitle, .section-description {
+      color: #6c757d;
+      margin-bottom: 20px;
+    }
+    .presentation {
+      padding: 3px 0;
+      background: linear-gradient(to right, #0056b3, #3700a5); /* Gradiente de azul oscuro a púrpura oscuro */
+      color: white;
+      text-align: center;
+    }
+    .project-name {
+      color: #ffc107; /* Amarillo */
+    }
+    .about-us, .special-features, .location {
+      padding: 50px 0;
+    }
+    .feature {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+      transition: transform 0.3s ease-in-out; /* Transición para la animación */
+    }
+    .feature:hover {
+      transform: translateY(-5px); /* Efecto de levantar al pasar el mouse */
+    }
+    .feature-image {
+      height: 250px; /* Altura máxima de la imagen */
+      object-fit: cover; /* Ajuste para cubrir el contenedor sin deformar */
+      border-top-left-radius: 8px; /* Borde redondeado en la esquina superior izquierda */
+      border-top-right-radius: 8px; /* Borde redondeado en la esquina superior derecha */
+    }
+    .map {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    footer {
+      background-color: #343a40; /* Fondo gris oscuro */
+      color: white;
+      padding: 0px 0;
+      text-align: center;
+      width: 100%;
+      position: relative;
+      left: 0;
+      bottom: 0;
+      margin-top: 50px; /* Espacio adicional arriba del pie de página */
+    }
+    footer a {
+      color: #ffc107; /* Amarillo */
+      text-decoration: none;
+      font-size: 24px; /* Tamaño de fuente para iconos */
+      margin: 0 20px; /* Espaciado entre iconos */
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Sección de Presentación -->
+<section class="presentation">
+  <div class="container">
+    <h1 class="title">Bienvenidos a <span class="project-name">PrestCoin</span></h1>
+    <p class="subtitle">Innovando el mundo de los préstamos con tecnología blockchain</p>
+  </div>
+</section>
+
+<!-- Sección Sobre Nosotros -->
+<section class="about-us">
+  <div class="container">
+    <h2 class="section-title text-center">¿Quiénes somos?</h2>
+    <div class="about-content text-center">
+      <p class="section-description">
+        En PrestCoin, estamos dedicados a revolucionar el sector financiero mediante la implementación de la tecnología blockchain en el ámbito de los préstamos. Nuestro objetivo es ofrecer soluciones financieras más seguras, transparentes y accesibles para todos.
+      </p>
+      <p class="section-description">
+        Nuestro equipo está compuesto por expertos en finanzas y tecnología blockchain que trabajan juntos para desarrollar una plataforma confiable y eficiente. Con PrestCoin, los usuarios pueden solicitar y ofrecer préstamos de manera rápida y segura, eliminando intermediarios y reduciendo costos.
+      </p>
+      <p class="section-description">
+        Estamos comprometidos en fomentar la inclusión financiera y proporcionar herramientas que empoderen a las personas para alcanzar sus metas financieras. PrestCoin es más que una plataforma de préstamos; es una comunidad de usuarios que creen en el poder de la tecnología para transformar el mundo financiero.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Sección Características Especiales -->
+<section class="special-features">
+  <div class="container">
+    <h2 class="section-title text-center">Nuestras Características Especiales</h2>
+    <div class="row">
+      <div class="col-lg-6 mb-4">
+        <div class="card feature">
+          <img src="https://zonadigital.pichincha.pe/blog/assets/img/article/contrato-de-prestamo-personal-1.jpg" alt="Contrato de Préstamo Personal" class="card-img-top feature-image">
+          <div class="card-body">
+            <h3 class="card-title feature-title">Seguridad Blockchain</h3>
+            <p class="card-text feature-description">
+              Utilizamos tecnología blockchain para garantizar la seguridad y transparencia en todas las transacciones. Cada préstamo está registrado en un libro mayor inmutable, ofreciendo máxima confianza a nuestros usuarios.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 mb-4">
+        <div class="card feature">
+          <img src="https://blog.bitso.com/wp-content/uploads/2023/04/71_seguridad-de-datos-de-blockchain.jpg" alt="Acceso Global" class="card-img-top feature-image">
+          <div class="card-body">
+            <h3 class="card-title feature-title">Acceso Global</h3>
+            <p class="card-text feature-description">
+              Nuestra plataforma permite a usuarios de todo el mundo acceder a préstamos y ofrecer financiamiento, eliminando barreras geográficas y promoviendo la inclusión financiera.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Agrega más características especiales aquí -->
+    </div>
+  </div>
+</section>
+
+<!-- Sección de Ubicación -->
+<section class="location">
+  <div class="container">
+    <h2 class="section-title text-center">Encuéntranos</h2>
+    <div class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15545.328350644178!2d-76.39705428261718!3d-13.07812749999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x910ff949d54aa86b%3A0x151329f44d1912c4!2sBanco%20de%20Credito%20del%20Peru!5e0!3m2!1ses-419!2spe!4v1716586719008!5m2!1ses-419!2spe" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <p class="section-description text-center">Nuestra oficina principal está ubicada en Av. Innovación 456, Ciudad Blockchain, Mundo Digital</p>
+  </div>
+</section>
+
+<!-- Pie de página -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p>&copy; 2024 PrestCoin. Todos los derechos reservados.</p>
+        <p>Síguenos en 
+          <a href="https://www.facebook.com/tecnologiaVG?locale=es_LA" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://github.com/vallegrande" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/company/tecnologiavg/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS y dependencias opcionales -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
