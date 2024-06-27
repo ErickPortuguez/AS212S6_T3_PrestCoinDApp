@@ -1,3 +1,220 @@
+/* Estilos adicionales personalizados */
+body {
+  background-color: #0d4e39; /* Fondo verde oscuro */
+  color: #ffffff; /* Texto blanco */
+  font-family: 'Roboto', sans-serif; /* Cambio de fuente a Roboto */
+}
+
+/* Estilos generales de títulos y subtítulos */
+.title, .section-title {
+  color: #ecb10e; /* Amarillo oscuro para los títulos principales */
+  margin-bottom: 20px;
+}
+
+.subtitle, .section-description {
+  color: #969393; /* Gris para subtítulos y descripciones */
+  margin-bottom: 20px;
+}
+
+/* Estilos para la sección de presentación */
+.presentation {
+  padding: 3px 0;
+  background: linear-gradient(to right, #0c0c0c, #242323); /* Gradiente oscuro */
+  color: white;
+  text-align: center;
+}
+
+.project-name {
+  color: #ffc107; /* Amarillo para el nombre del proyecto */
+}
+
+/* Estilos para la sección Quiénes somos */
+.about-us {
+  background-color: #2b292986; /* Color de fondo oscuro */
+  padding: 50px 0; /* Espaciado interno arriba y abajo */
+}
+
+.section-title {
+  font-size: 2.5rem; /* Tamaño de fuente del título */
+  color: #ffd000; /* Amarillo oscuro para el título */
+  text-align: center; /* Alineación del título al centro */
+  margin-bottom: 30px; /* Margen inferior */
+}
+
+.section-description {
+  font-size: 1.1rem; /* Tamaño de fuente del párrafo */
+  line-height: 1.6; /* Altura de línea del párrafo */
+  text-align: justify; /* Alineación justificada del texto */
+}
+
+.large-image {
+  width: 100%; /* Ancho completo de la imagen */
+  height: auto; /* Altura automática para mantener la proporción */
+  max-height: 500px; /* Altura máxima opcional */
+  object-fit: cover; /* Ajuste para cubrir el contenedor sin deformar */
+  border-radius: 8px; /* Borde redondeado */
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-title {
+  animation: fadeInUp 1s ease-out;
+}
+
+.animate-text {
+  animation: fadeInUp 1s ease-out;
+}
+
+.animate-image {
+  animation: fadeIn 1s ease-out, zoomIn 1s ease-out;
+}
+
+/* Retrasos en las animaciones para un efecto escalonado */
+.animate-text:nth-child(1) {
+  animation-delay: 0.6s;
+}
+
+.animate-text:nth-child(2) {
+  animation-delay: 0.7s;
+}
+
+.animate-text:nth-child(3) {
+  animation-delay: 0.9s;
+}
+/* Retrasos en las animaciones para un efecto escalonado */
+.animate-text:nth-child(1) {
+  animation-delay: 0.6s;
+}
+
+.animate-text:nth-child(2) {
+  animation-delay: 0.7s;
+}
+
+.animate-text:nth-child(3) {
+  animation-delay: 0.9s;
+}
+
+
+/* Estilos para la sección Características Especiales */
+.special-features {
+  background-color: #0c0c0c; /* Color de fondo oscuro */
+  padding: 50px 0; /* Espaciado interno arriba y abajo */
+}
+
+.feature {
+  height: 100%; /* Ajuste de altura de las tarjetas */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra suave */
+  transition: transform 0.3s ease; /* Transición para la animación */
+  overflow: hidden; /* Ocultar desbordamiento para la animación */
+  position: relative; /* Posición relativa para elementos internos */
+}
+
+.feature:hover {
+  transform: translateY(-8px); /* Efecto de levantar al pasar el mouse */
+}
+
+.feature-image {
+  width: 100%; /* Ancho completo de la imagen */
+  height: auto; /* Altura automática para mantener la proporción */
+  border-top-left-radius: 0px; /* Borde redondeado en la esquina superior izquierda */
+  border-top-right-radius: 0px; /* Borde redondeado en la esquina superior derecha */
+  transition: transform 0.3s ease; /* Transición para la animación */
+}
+
+.feature:hover .feature-image {
+  transform: scale(1.1); /* Efecto de escala al pasar el mouse */
+}
+
+.feature-title {
+  font-size: 1.8rem; /* Tamaño de fuente del título */
+  margin-top: 15px; /* Margen superior */
+  color: #0c0c0c; /* Azul oscuro para el título */
+}
+
+.feature-description {
+  font-size: 1rem; /* Tamaño de fuente del párrafo de la característica */
+  color: #555555; /* Color gris oscuro para el texto */
+}
+
+/* Estilos para la sección de Ubicación */
+.location {
+  background-color: #333333; /* Color de fondo oscuro */
+  padding: 50px 0; /* Espaciado interno arriba y abajo */
+}
+
+.location .section-description {
+  font-size: 1.2rem; /* Tamaño de fuente del párrafo */
+  margin-top: 20px; /* Margen superior */
+  text-align: center; /* Alineación del texto al centro */
+}
+
+.map {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  overflow: hidden; /* Ocultar el desbordamiento */
+  border-radius: 8px; /* Borde redondeado */
+}
+
+.map iframe {
+  width: 100%; /* Ancho completo del mapa */
+  height: 450px; /* Altura del mapa */
+  border: none; /* Sin borde para el iframe */
+}
+
+/* Estilos para el pie de página */
+footer {
+  background-color: #0c0c0c; /* Fondo gris oscuro */
+  color: white;
+  padding: 70px 0; /* Aumentar el padding para más altura */
+  text-align: center;
+  width: 100%;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  margin-top: 0px; /* Espacio adicional arriba del pie de página */
+}
+
+footer a {
+  color: #ffc107; /* Amarillo */
+  text-decoration: none;
+  font-size: 30px; /* Tamaño de fuente para iconos */
+  margin: 0 5px; /* Espaciado entre iconos */
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
 /* Estilos de ejemplo para las secciones */
 .presentation .title,
 .presentation .subtitle {
@@ -6,91 +223,44 @@
 
 /* Sección de Presentación */
 .presentation {
-    background-color: #efeff1; /* Color de fondo */
-    padding: 40px 0; /* Espaciado interno arriba y abajo */
-    text-align: center; /* Alineación del contenido al centro */
-  }
-  
-  .title {
-    font-size: 2.5rem; /* Tamaño de fuente del título */
-  }
-  
-  .project-name {
-    color: #007bff; /* Color del nombre del proyecto */
-  }
-  
-  .subtitle {
-    font-size: 1.5rem; /* Tamaño de fuente del subtítulo */
-    margin-top: 20px; /* Margen superior */
-  }
-  
-  /* Sección Acerca de Nosotros */
-  .about-us {
-    background-color: #fff; /* Color de fondo */
-    padding: 50px 0; /* Espaciado interno arriba y abajo */
-  }
-  
-  .section-title {
-    font-size: 2.5rem; /* Tamaño de fuente del título */
-    text-align: center; /* Alineación del título al centro */
-  }
-  
-  .section-description {
-    font-size: 1.2rem; /* Tamaño de fuente del párrafo */
-    line-height: 1.6; /* Altura de línea del párrafo */
-  }
-  
-  /* Sección de Características Especiales */
-  .special-features {
-    background-color: #f9f9f9; /* Color de fondo */
-    padding: 50px 0; /* Espaciado interno arriba y abajo */
-  }
-  
-  .feature {
-    height: 100%; /* Ajuste de altura de las tarjetas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    transition: transform 0.3s ease; /* Transición para la animación */
-  }
-  
-  .feature:hover {
-    transform: translateY(-5px); /* Efecto de levantar al pasar el mouse */
-  }
-  
-  .feature-image {
-    max-width: 100%; /* Ancho máximo de la imagen */
-    height: auto; /* Altura automática para mantener la proporción */
-    border-top-left-radius: 8px; /* Borde redondeado en la esquina superior izquierda */
-    border-top-right-radius: 8px; /* Borde redondeado en la esquina superior derecha */
-  }
-  
-  .feature-title {
-    font-size: 1.8rem; /* Tamaño de fuente del título */
-    margin-top: 15px; /* Margen superior */
-  }
-  
-  .feature-description {
-    font-size: 1rem; /* Tamaño de fuente del párrafo de la característica */
-  }
-  
-  /* Sección de Ubicación */
-  .location {
-    padding: 50px 0; /* Espaciado interno arriba y abajo */
-  }
-  
-  .map {
-    overflow: hidden; /* Ocultar el desbordamiento */
-    border-radius: 8px; /* Borde redondeado */
-  }
-  
-  .map iframe {
-    width: 100%; /* Ancho completo del mapa */
-    height: 450px; /* Altura del mapa */
-    border: none; /* Sin borde para el iframe */
-  }
-  
-  .location .section-description {
-    font-size: 1.2rem; /* Tamaño de fuente del párrafo */
-    margin-top: 20px; /* Margen superior */
-    text-align: center; /* Alineación del texto al centro */
-  }
-  
+  background-color: #ffffff; /* Color de fondo oscuro */
+  padding: 40px 0; /* Espaciado interno arriba y abajo */
+  text-align: center; /* Alineación del contenido al centro */
+}
+
+.title {
+  font-size: 3rem; /* Tamaño de fuente del título */
+  font-weight: bold; /* Negrita para destacar */
+  text-transform: uppercase; /* Convertir texto a mayúsculas */
+}
+
+.project-name {
+  color: #ffc107; /* Color amarillo para el nombre del proyecto */
+}
+
+.subtitle {
+  font-size: 1.8rem; /* Tamaño de fuente del subtítulo */
+  margin-top: 20px; /* Margen superior */
+}
+
+/* Estilo para la animación de llenado de agua */
+.future-goal-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.future-goal-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(2, 73, 32, 0.8), rgba(221, 219, 210, 0.582)); /* Gradiente blanco semi-transparente */
+  transform: translateY(100%);
+  transition: transform 0.8s ease;
+}
+
+.future-goal-card:hover::before {
+  transform: translateY(0);
+}

@@ -6,98 +6,92 @@
   <title>PRESTCOIN</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="transaccion.component.css">
   <style>
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px) scale(0.9);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-      }
-    }
-
-    .animated {
-      animation: fadeInUp 0.8s ease-in-out;
-    }
-
-    .card {
-      width: 100%;
-    }
-
-    .full-height {
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .btn-meta {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-    }
-
-    .card {
-      margin-top: 0 !important;
+    body {
+      background: #75486c;
     }
   </style>
 </head>
 <body class="full-height">
   <div class="container">
-    <div class="row justify-content-center">
-      <!-- Botón para iniciar sesión con MetaMask -->
+    <div class="row justify-content-center mb-4">
       <div class="col-lg-3 text-center animated btn-meta">
         <button class="btn btn-primary" (click)="connectWallet()">
-          <i class="fas fa-sign-in-alt"></i> Iniciar sesión con MetaMask
+          <i class="fas fa-sign-in-alt"></i> INICIAR SESIÓN
         </button>
       </div>
-      <!-- Card para la información del usuario -->
+    </div>
+    <div class="row justify-content-center">
       <div class="col-lg-4 animated">
         <div class="card shadow-lg h-100">
           <div class="card-header header-blockchain text-center">
-            <h4><i class="fas fa-user-circle"></i> Datos del Usuario</h4>
+            <h4><i class="fas fa-user-circle"></i> TUS DATOS </h4>
           </div>
           <div class="card-body">
             <div class="mb-8">
-              <h5><i class="fas fa-user"></i> Dirección de la cuenta de usuario</h5>
+              <h5><i class="fas fa-user"></i> DIRECCIÓN DE TU CUENTA </h5>
               <p class="text-muted">{{ address }}</p>
             </div>
             <div class="mb-6">
-              <h5><i class="fas fa-wallet"></i> Saldo de cuenta del usuario</h5>
+              <h5><i class="fas fa-wallet"></i> SALDO DE TU CUENTA </h5>
               <p class="text-muted">{{ balance }} ETH</p>
             </div>
           </div>
         </div>
       </div>
-      <!-- Card para el formulario de transacción -->
       <div class="col-lg-4 animated">
         <div class="card shadow-lg h-100">
           <div class="card-header header-blockchain text-center">
-            <h2><i class="fas fa-exchange-alt"></i> Solicitar Préstamo</h2>
+            <h4><i class="fas fa-paper-plane"></i> TRANSACCIÓN </h4>
           </div>
           <div class="card-body">
             <form [formGroup]="transactionForm" (ngSubmit)="sendTransaction()">
               <div class="form-group">
-                <label for="toAddress"><i class="fas fa-arrow-right"></i> Dirección de destino</label>
-                <input type="text" id="toAddress" class="form-control" formControlName="toAddress" placeholder="Ingrese la dirección de destino">
+                <label for="toAddress"><i class="fas fa-address-card"></i> DIRECCIÓN DEL DESTINATARIO</label>
+                <input type="text" id="toAddress" formControlName="toAddress" class="form-control" placeholder="Introduce la dirección">
               </div>
-              <div class="form-group mt-6">
-                <label for="amount"><i class="fas fa-coins"></i> Cantidad (ETH)</label>
-                <input type="number" id="amount" class="form-control" formControlName="amount" placeholder="Ingrese la cantidad">
+              <div class="form-group">
+                <label for="amount"><i class="fas fa-coins"></i> CANTIDAD (ETH)</label>
+                <input type="number" id="amount" formControlName="amount" class="form-control" placeholder="Introduce la cantidad">
               </div>
-              <button type="submit" class="btn btn-primary btn-block mt-4">
-                <i class="fas fa-paper-plane"></i> Enviar transacción
-              </button>
+              <div class="text-center">
+                <button type="submit" class="btn btn-custom-primary">
+                  <i class="fas fa-paper-plane"></i> ENVIAR PRESTAMO
+                </button>
+              </div>
             </form>
           </div>
         </div>
       </div>
     </div>
+    <!-- Botón para desconectar la cartera -->
+    <div class="row justify-content-center mt-4">
+      <div class="col-lg-3 text-center animated btn-meta">
+        <button class="btn btn-custom-danger" (click)="disconnectWallet()">
+          <i class="fas fa-sign-out-alt"></i> DESCONECTAR
+        </button>
+      </div>
+    </div>
   </div>
+  
+  <!-- Pie de página -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p>&copy; 2024 PrestCoin. Todos los derechos reservados.</p>
+          <p>Síguenos en 
+            <a href="https://www.facebook.com/tecnologiaVG?locale=es_LA" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://github.com/vallegrande" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/company/tecnologiavg/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
+  <!-- Bootstrap JS y dependencias opcionales -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

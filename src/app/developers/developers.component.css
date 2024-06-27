@@ -1,6 +1,184 @@
+/* Estilos generales */
 
-  .card-img-top {
-    max-width: 75%; /* Hace que la imagen no se salga del ancho del contenedor */
-    height: auto;   /* Mantiene la proporción de la imagen */
-    object-fit: cover; /* Ajusta la imagen sin distorsión */
-  }
+body {
+  background-color: #09492b; /* Fondo verde oscuro */
+  color: #ffffff; /* Texto blanco */
+  font-family: 'Roboto', sans-serif; /* Cambio de fuente a Roboto */
+}
+
+.title, .section-title {
+  font-size: 2.8rem; /* Aumentamos el tamaño de fuente */
+  color: #ecb10e; /* Amarillo oscuro para los títulos principales */
+  margin-bottom: 10px; /* Aumentamos el espacio inferior */
+  text-align: center; /* Centrar el texto del título */
+}
+
+.subtitle, .section-description {
+  font-size: 1.2rem; /* Tamaño de fuente aumentado */
+  color: #ece8e8; /* Gris para subtítulos y descripciones */
+  margin-bottom: 30px; /* Aumentamos el espacio inferior */
+  text-align: center; /* Centrar el texto de la descripción */
+}
+
+.container {
+  margin-top: 50px; /* Aumentamos el margen superior del contenedor */
+}
+
+.card {
+  margin-bottom: 30px; /* Aumentamos el espacio inferior */
+  box-shadow: 0 0 15px rgb(0, 0, 0); /* Sombra más definida */
+  transition: transform 0.3s ease-in-out; /* Transición para la animación */
+  background-color: #000000; /* Color de fondo de las tarjetas */
+  height: 100%; /* Altura completa de la tarjeta */
+}
+
+.card:hover {
+  transform: translateY(-8px); /* Efecto de levantar al pasar el mouse */
+}
+
+.card-img-top {
+  max-width: 100%; /* Hace que la imagen no se salga del ancho del contenedor */
+  height: auto;   /* Mantiene la proporción de la imagen */
+  object-fit: cover; /* Ajusta la imagen sin distorsión */
+  border-radius: 10px; /* Borde redondeado */
+}
+
+.card-body {
+  padding: 25px; /* Aumentamos el padding interior */
+}
+
+.card-title {
+  font-size: 2.4rem; /* Tamaño de fuente para el título */
+  font-weight: bold;
+  margin-bottom: 20px; /* Aumentamos el espacio inferior */
+  background: linear-gradient(to right, #ecca04, #0c0c0c); /* Gradiente oscuro para el título */
+  -webkit-background-clip: text; /* Clip de texto para aplicar el gradiente en navegadores WebKit */
+  background-clip: text; /* Clip de texto para aplicar el gradiente de fondo */
+  -webkit-text-fill-color: transparent; /* Color del texto transparente */
+  text-align: center; /* Centrar el texto del título */
+}
+
+.card-text {
+  font-size: 1.1rem; /* Tamaño de fuente para el texto reducido */
+  line-height: 1.4;
+  color: #ffffff; /* Texto blanco */
+  text-align: justify; /* Alinear el texto justificado */
+}
+
+.skills {
+  list-style-type: none;
+  padding: 0;
+  text-align: center; /* Alinear las habilidades al centro */
+}
+
+.skills li {
+  display: inline;
+  margin-right: 15px; /* Aumentamos el espacio entre ítems */
+}
+
+.skills .badge {
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  border-radius: 20px;
+  margin-bottom: 8px;
+  transition: transform 0.3s ease-in-out; /* Transición suave para transformaciones */
+}
+
+.skills .badge:hover {
+  transform: translateY(-3px); /* Efecto de levantamiento al pasar el mouse */
+}
+
+.badge-html {
+  background: linear-gradient(90deg, #e44d26, #0d0e0d);
+}
+
+.badge-css {
+  background: linear-gradient(90deg, #264de4, #0d0e0d);
+}
+
+.badge-js {
+  background: linear-gradient(90deg, #f0db4f, #0d0e0d);
+}
+
+.badge-angular {
+  background: linear-gradient(90deg, #70062a, #0d0e0d); /* Rojo oscuro para Angular */
+}
+
+.badge-react {
+  background: linear-gradient(90deg, #0b91d4, #0d0e0d);
+}
+
+.social-icons {
+  margin-top: 20px; /* Aumentamos el espacio superior */
+  text-align: center; /* Alinear los íconos sociales al centro */
+}
+
+.social-icons a {
+  color: #ffffff; /* Texto blanco para íconos sociales */
+  margin-right: 25px; /* Aumentamos el espacio entre íconos */
+  font-size: 1.6rem; /* Aumentamos el tamaño de los íconos */
+}
+
+.social-icons a i {
+  font-size: 2.2rem; /* Tamaño de fuente aumentado para iconos de redes sociales */
+}
+
+.social-icons a i.fa-linkedin {
+  color: #0e76a8; /* Color azul para LinkedIn */
+}
+
+.social-icons a i.fa-github {
+  color: #333333; /* Color gris oscuro para GitHub */
+}
+
+/* Estilos para el pie de página */
+footer {
+  background-color: #0c0c0c; /* Fondo gris oscuro */
+  color: white;
+  padding: 70px 0; /* Aumentar el padding para más altura */
+  text-align: center;
+  width: 100%;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  margin-top: 20px; /* Espacio adicional arriba del pie de página */
+}
+
+footer a {
+  color: #ffc107; /* Amarillo */
+  text-decoration: none;
+  font-size: 30px; /* Tamaño de fuente para iconos */
+  margin: 0 5px; /* Espaciado entre iconos */
+  transition: transform 0.3s ease-in-out; /* Transición suave para transformaciones */
+}
+
+footer a:hover {
+  transform: translateY(-5px); /* Efecto de levantamiento al pasar el mouse */
+}
+
+/* Estilos específicos para los cards de los developers */
+.developer-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.developer-card .card-img-top {
+  height: 300px; /* Altura fija para la imagen del developer */
+  width: 300px; /* Ancho fijo para la imagen del developer */
+  object-fit: cover; /* Ajuste para cubrir el contenedor sin deformar */
+  border-radius: 40%; /* Borde redondeado para hacerla circular */
+  margin-bottom: 25px; /* Espacio inferior entre la imagen y el contenido */
+}
+
+/* Estilo específico para el botón "Enviar un correo" */
+.btn-primary {
+  background-color: #ffc107; /* Fondo amarillo */
+  border-color: #ffc107; /* Borde amarillo */
+}
+
+.btn-primary:hover {
+  background-color: #c59402; /* Color de fondo más oscuro al pasar el mouse */
+  border-color: #c59402; /* Color de borde más oscuro al pasar el mouse */
+}

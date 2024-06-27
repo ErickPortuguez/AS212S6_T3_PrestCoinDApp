@@ -1,10 +1,29 @@
+/* Estilos específicos del archivo CSS externo */
+
 body {
-  background: #f4f4f9;
+  background: #0a0206;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animated {
+  animation: fadeInUp 0.8s ease-in-out;
 }
 
 .card {
+  width: 100%;
   border-radius: 15px;
   transition: transform 0.3s ease-in-out;
+  margin-bottom: 20px; /* Espacio entre las cards */
 }
 
 .card-header {
@@ -25,7 +44,7 @@ body {
 }
 
 .btn-primary {
-  background: linear-gradient(90deg, #a00e63, #0d0e0d);;
+  background: linear-gradient(90deg, #a00e63, #0d0e0d);
   border: none;
 }
 
@@ -59,9 +78,44 @@ body {
   animation: fadeInUp 0.5s forwards;
 }
 
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.btn-custom-primary {
+  background: linear-gradient(90deg, #a00e63, #0d0e0d);
+  border: none;
+  color: white; /* Color del texto */
 }
+
+.btn-custom-primary i {
+  color: white; /* Color del icono */
+}
+
+.btn-custom-danger {
+  background: linear-gradient(90deg, #a00e63, #0d0e0d);
+  border: none;
+  color: white; /* Color del texto */
+}
+
+.btn-custom-danger i {
+  color: white; /* Color del icono */
+}
+
+/* Estilos para el pie de página */
+footer {
+  background-color: #0c0c0c; /* Fondo gris oscuro */
+  color: white;
+  padding: 70px 0; /* Aumentar el padding para más altura */
+  text-align: center;
+  width: 100%;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  margin-top: 20px; /* Espacio adicional arriba del pie de página */
+}
+
+footer a {
+  color: #ffc107; /* Amarillo */
+  text-decoration: none;
+  font-size: 30px; /* Tamaño de fuente para iconos */
+  margin: 0 5px; /* Espaciado entre iconos */
+}
+
+/* Aquí terminan los estilos específicos del archivo CSS externo */

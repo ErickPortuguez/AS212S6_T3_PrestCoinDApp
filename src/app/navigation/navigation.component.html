@@ -8,70 +8,6 @@
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <!-- Font Awesome para iconos -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <style>
-    /* Estilos adicionales personalizados */
-    body {
-      background-color: #f8f9fa;
-      color: #343a40;
-    }
-    .title, .section-title {
-      color: #0056b3; /* Azul oscuro */
-      margin-bottom: 20px;
-    }
-    .subtitle, .section-description {
-      color: #6c757d;
-      margin-bottom: 20px;
-    }
-    .presentation {
-      padding: 3px 0;
-      background: linear-gradient(to right, #0056b3, #3700a5); /* Gradiente de azul oscuro a púrpura oscuro */
-      color: white;
-      text-align: center;
-    }
-    .project-name {
-      color: #ffc107; /* Amarillo */
-    }
-    .about-us, .special-features, .location {
-      padding: 50px 0;
-    }
-    .feature {
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-      transition: transform 0.3s ease-in-out; /* Transición para la animación */
-    }
-    .feature:hover {
-      transform: translateY(-5px); /* Efecto de levantar al pasar el mouse */
-    }
-    .feature-image {
-      height: 250px; /* Altura máxima de la imagen */
-      object-fit: cover; /* Ajuste para cubrir el contenedor sin deformar */
-      border-top-left-radius: 8px; /* Borde redondeado en la esquina superior izquierda */
-      border-top-right-radius: 8px; /* Borde redondeado en la esquina superior derecha */
-    }
-    .map {
-      margin-top: 20px;
-      margin-bottom: 20px;
-    }
-    footer {
-      background-color: #343a40; /* Fondo gris oscuro */
-      color: white;
-      padding: 0px 0;
-      text-align: center;
-      width: 100%;
-      position: relative;
-      left: 0;
-      bottom: 0;
-      margin-top: 50px; /* Espacio adicional arriba del pie de página */
-    }
-    footer a {
-      color: #ffc107; /* Amarillo */
-      text-decoration: none;
-      font-size: 24px; /* Tamaño de fuente para iconos */
-      margin: 0 20px; /* Espaciado entre iconos */
-    }
-    footer a:hover {
-      text-decoration: underline;
-    }
-  </style>
 </head>
 <body>
 
@@ -86,20 +22,28 @@
 <!-- Sección Sobre Nosotros -->
 <section class="about-us">
   <div class="container">
-    <h2 class="section-title text-center">¿Quiénes somos?</h2>
-    <div class="about-content text-center">
-      <p class="section-description">
-        En PrestCoin, estamos dedicados a revolucionar el sector financiero mediante la implementación de la tecnología blockchain en el ámbito de los préstamos. Nuestro objetivo es ofrecer soluciones financieras más seguras, transparentes y accesibles para todos.
-      </p>
-      <p class="section-description">
-        Nuestro equipo está compuesto por expertos en finanzas y tecnología blockchain que trabajan juntos para desarrollar una plataforma confiable y eficiente. Con PrestCoin, los usuarios pueden solicitar y ofrecer préstamos de manera rápida y segura, eliminando intermediarios y reduciendo costos.
-      </p>
-      <p class="section-description">
-        Estamos comprometidos en fomentar la inclusión financiera y proporcionar herramientas que empoderen a las personas para alcanzar sus metas financieras. PrestCoin es más que una plataforma de préstamos; es una comunidad de usuarios que creen en el poder de la tecnología para transformar el mundo financiero.
-      </p>
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2 class="section-title text-center animate-title">¿Quiénes somos?</h2>
+        <div class="about-content">
+          <p class="section-description animate-text">
+            En PrestCoin, estamos dedicados a revolucionar el sector financiero mediante la implementación de la tecnología blockchain en el ámbito de los préstamos. Nuestro objetivo es ofrecer soluciones financieras más seguras, transparentes y accesibles para todos.
+          </p>
+          <p class="section-description animate-text">
+            Nuestro equipo está compuesto por expertos en finanzas y tecnología blockchain que trabajan juntos para desarrollar una plataforma confiable y eficiente. Con PrestCoin, los usuarios pueden solicitar y ofrecer préstamos de manera rápida y segura, eliminando intermediarios y reduciendo costos.
+          </p>
+          <p class="section-description animate-text">
+            Estamos comprometidos en fomentar la inclusión financiera y proporcionar herramientas que empoderen a las personas para alcanzar sus metas financieras. PrestCoin es más que una plataforma de préstamos; es una comunidad de usuarios que creen en el poder de la tecnología para transformar el mundo financiero.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <img src="assets/images/about-us.jpg" alt="Descripción de la imagen" class="img-fluid large-image animate-image">
+      </div>
     </div>
   </div>
 </section>
+
 
 <!-- Sección Características Especiales -->
 <section class="special-features">
@@ -128,7 +72,72 @@
           </div>
         </div>
       </div>
-      <!-- Agrega más características especiales aquí -->
+    </div>
+  </div>
+</section>
+
+<!-- Sección de Objetivos a Futuro -->
+<section class="future-goals">
+  <div class="container">
+    <h2 class="section-title text-center">Objetivos a Futuro</h2>
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <div class="card feature future-goal-card">
+          <div class="card-body">
+            <div class="progress-bar-container">
+              <div class="progress-bar"></div>
+            </div>
+            <h3 class="card-title feature-title">Expansión Global</h3>
+            <p class="card-text feature-description">
+              Nuestro objetivo es expandirnos a nivel global, permitiendo que más personas tengan acceso a soluciones financieras seguras y eficientes mediante nuestra plataforma de préstamos basada en blockchain.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card feature future-goal-card">
+          <div class="card-body">
+            <div class="progress-bar-container">
+              <div class="progress-bar"></div>
+            </div>
+            <h3 class="card-title feature-title">Innovación Continua</h3>
+            <p class="card-text feature-description">
+              Nos comprometemos a seguir innovando y mejorando nuestra tecnología para ofrecer la mejor experiencia a nuestros usuarios, manteniéndonos a la vanguardia en el uso de blockchain para soluciones financieras.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Card de Inclusión Financiera -->
+      <div class="col-lg-4 mb-4">
+        <div class="card feature future-goal-card">
+          <div class="card-body">
+            <div class="progress-bar-container">
+              <div class="progress-bar"></div>
+            </div>
+            <h3 class="card-title feature-title">Inclusión Financiera</h3>
+            <p class="card-text feature-description">
+              Queremos fomentar la inclusión financiera en todas las regiones, asegurándonos de que las personas en áreas subatendidas también puedan beneficiarse de nuestros servicios.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sección de Financiación -->
+<section class="funding">
+  <div class="container">
+    <h2 class="section-title text-center">ESTE PROYECTO ES FINANCIADO POR</h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-8 mb-4">
+        <div class="card feature text-center">
+          <img src="assets/images/fondo.png" alt="IES Valle Grande" class="card-img-top feature-image funding-image">
+          <div class="card-body">
+            <h3 class="card-title feature-title">IES Valle Grande</h3>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
