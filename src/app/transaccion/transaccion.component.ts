@@ -17,6 +17,7 @@ export class TransaccionComponent implements OnInit {
   balance: number = 0;
   isConnecting: boolean = false;
   web3Initialized: boolean = false;
+  transactionStatus: string = '';
 
   constructor(private web3Service: Web3Service) { }
 
@@ -56,9 +57,11 @@ export class TransaccionComponent implements OnInit {
         this.transactionForm.disable();
         await this.web3Service.sendTransaction(toAddress, amount);
         this.balance = await this.web3Service.getBalance();
-        this.transactionForm.reset();
+        this.transactionForm.reset(); // Limpiar el formulario después de enviar la transacción
+        this.transactionStatus = 'Transacción enviada con éxito!';
       } catch (error) {
         console.error('Error sending transaction:', error);
+        this.transactionStatus = 'Error enviando la transacción.';
       } finally {
         this.transactionForm.enable();
       }

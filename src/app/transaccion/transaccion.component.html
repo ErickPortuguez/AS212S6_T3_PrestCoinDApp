@@ -61,6 +61,9 @@
                 </button>
               </div>
             </form>
+            <div *ngIf="transactionStatus" class="alert alert-info mt-3" role="alert">
+              {{ transactionStatus }}
+            </div>
           </div>
         </div>
       </div>
