@@ -1,6 +1,6 @@
 import { Web3Service } from './../service/web3.service';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-transaccion',
@@ -8,20 +8,21 @@ import { FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./transaccion.component.css']
 })
 export class TransaccionComponent implements OnInit {
-  transactionForm = new FormGroup({
-    toAddress: new FormControl(''),
-    amount: new FormControl(0),
-  });
-
+  transactionForm: FormGroup;
   address: string = '';
   balance: number = 0;
   isConnecting: boolean = false;
   web3Initialized: boolean = false;
-  transactionStatus: string = '';
+  transactionStatus: string | null = null;
 
-  constructor(private web3Service: Web3Service) { }
+  constructor(private fb: FormBuilder, private web3Service: Web3Service) {
+    this.transactionForm = this.fb.group({
+      toAddress: ['', [Validators.required, Validators.pattern(/^0x[a-fA-F0-9]{40}$/)]],
+      amount: ['', [Validators.required, Validators.min(0.00000001)]]
+    });
+  }
 
-  async ngOnInit() { }
+  async ngOnInit() {}
 
   async connectWallet() {
     if (!this.isConnecting) {
@@ -64,7 +65,17 @@ export class TransaccionComponent implements OnInit {
         this.transactionStatus = 'Error enviando la transacción.';
       } finally {
         this.transactionForm.enable();
+        // Ocultar el mensaje de estado después de 3 segundos
+        setTimeout(() => {
+          this.transactionStatus = null;
+        }, 3000);
       }
+    } else {
+      this.transactionStatus = 'Por favor, completa todos los campos correctamente';
+      // Ocultar el mensaje de estado después de 3 segundos
+      setTimeout(() => {
+        this.transactionStatus = null;
+      }, 3000);
     }
   }
 
@@ -74,7 +85,12 @@ export class TransaccionComponent implements OnInit {
     this.balance = 0;
     this.web3Initialized = false;
     console.log('Wallet disconnected');
-    // Optional: Reload the page to force MetaMask disconnection
+    this.transactionStatus = 'Cartera desconectada';
+    // Ocultar el mensaje de estado después de 3 segundos
+    setTimeout(() => {
+      this.transactionStatus = null;
+    }, 3000);
+    // Recargar la página para forzar la desconexión de MetaMask
     location.reload();
   }
 
